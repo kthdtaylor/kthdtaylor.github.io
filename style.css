@@ -14,7 +14,6 @@ input {
   transition: all 0.3s ease;
   position: relative;
   display: inline-block;
-  align: center;
 }
 
 input:hover {
