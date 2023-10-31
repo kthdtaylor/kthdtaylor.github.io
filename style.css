@@ -1,6 +1,10 @@
 body{
 	margin: 0
-} 
+}
+
+.center {
+  text-align: center;
+}
 
 input {
   width: 130px;
