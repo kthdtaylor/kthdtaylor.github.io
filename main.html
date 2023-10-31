@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en-US">
+<head>
+<meta charset="EUC-KR">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="/Users/mj/Desktop/fitamin_oxquiz/style.css">
+<title>핏타민 OX 퀴즈</title>
+<script>
+var randomlinks=new Array()
+
+randomlinks[0]="01.html"
+randomlinks[1]="02.html"
+randomlinks[2]="03.html"
+randomlinks[3]="04.html"
+randomlinks[4]="05.html"
+randomlinks[5]="06.html"
+randomlinks[6]="07.html"
+randomlinks[7]="08.html"
+randomlinks[8]="09.html"
+randomlinks[9]="10.html"
+randomlinks[10]="11.html"
+randomlinks[11]="12.html"
+randomlinks[12]="13.html"
+randomlinks[13]="14.html"
+randomlinks[14]="15.html"
+randomlinks[15]="16.html"
+randomlinks[16]="17.html"
+randomlinks[17]="18.html"
+randomlinks[18]="19.html"
+randomlinks[19]="20.html"
+randomlinks[20]="21.html"
+randomlinks[21]="22.html"	
+
+
+function randomlink(){
+window.location=randomlinks[Math.floor(Math.random()*randomlinks.length)]
+}
+//-->
+</script>
+
+</head>
+<body onload = "showImage()">
+	<img  src="img/main.png"  style="max-width:100%" height:auto/>
+	<form>
+<p><input type="button" name="B1" value="퀴즈풀기" onclick="randomlink()"></p> </form>
+<!--Uncomment below to use a regular text link instead
+<a href="javascript:randomlink()">Random Link</a>
+-->
+</body>
+</html>
