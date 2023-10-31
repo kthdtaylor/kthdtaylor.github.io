@@ -6,7 +6,7 @@ body{
   text-align: center;
 }
 
-.ox_button {
+#ox_button {
  text-align: center;
  display :inline-block;
 }
