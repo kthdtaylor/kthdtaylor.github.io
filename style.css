@@ -6,6 +6,11 @@ body{
   text-align: center;
 }
 
+.ox_button {
+ text-align: center;
+ display :inline-block;
+}
+
 input {
   width: 130px;
   height: 40px;
