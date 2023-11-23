@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>크리스마스 룰렛 게임</title>
+  <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+  <style>
+    body {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      overflow: hidden; /* Prevent scrolling */
+    }
+
+    #roulette-container {
+      position: relative;
+    }
+
+    #roulette {
+      width: 300px;
+      height: 300px;
+      position: relative;
+      overflow: hidden;
+      transition: transform 2s ease-out;
+    }
+
+    #result {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-size: 18px;
+      color: #fff;
+      text-align: center;
+    }
+
+    #loading-container {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(255, 255, 255, 0.8);
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      z-index: 1000;
+    }
+
+    #loading {
+      font-size: 24px;
+      color: #333;
+    }
+
+    button {
+      margin-top: 20px;
+      padding: 10px 20px;
+      font-size: 16px;
+      cursor: pointer;
+      background-color: #e44d26;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      transition: background-color 0.3s;
+      position: absolute;
+      bottom: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    button:hover {
+      background-color: #c63718;
+    }
+  </style>
+</head>
+<body>
+
+<div id="roulette-container">
+  <div id="roulette">
+    <lottie-player src="tree.json" background="transparent" speed="1" style="width: 100%; height: 100%" loop controls autoplay direction="1" mode="normal"></lottie-player>
+    <div id="result"></div>
+  </div>
+</div>
+<div id="loading-container">
+  <div id="loading">결과 확인중...</div>
+</div>
+<button onclick="spinRoulette()">룰렛 돌리기</button>
+
+<script>
+  function spinRoulette() {
+    const roulette = document.getElementById('roulette');
+    const resultDiv = document.getElementById('result');
+    const loadingContainer = document.getElementById('loading-container');
+
+    // 표시할 결과
+    const result = Math.floor(Math.random() * 5) + 1;
+    resultDiv.innerText = `축하합니다! ${result}등 상품입니다.`;
+
+    // 이미지 회전
+    const rotation = 360 * 5 + (360 / 5) * (result - 1);
+    roulette.style.transform = `rotate(${rotation}deg)`;
+
+    // 2초 후 로딩 표시
+    setTimeout(() => {
+      loadingContainer.style.display = 'flex';
+
+      // 2초 후 결과 페이지로 이동
+      setTimeout(() => {
+        loadingContainer.style.display = 'none';
+        window.location.href = 'result.html?result=' + result;
+      }, 2000);
+    }, 2000);
+  }
+</script>
+
+</body>
+</html>

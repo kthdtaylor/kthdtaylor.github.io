@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>결과 페이지</title>
+  <style>
+    body {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f5f5f5;
+    }
+
+    #result-container {
+      text-align: center;
+    }
+
+    #result {
+      font-size: 24px;
+      color: #333;
+    }
+
+    #back-to-home {
+      margin-top: 20px;
+      padding: 10px 20px;
+      font-size: 16px;
+      cursor: pointer;
+      background-color: #e44d26;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      transition: background-color 0.3s;
+    }
+
+    #back-to-home:hover {
+      background-color: #c63718;
+    }
+  </style>
+</head>
+<body>
+
+<div id="result-container">
+  <div id="result"></div>
+  <button id="back-to-home" onclick="goToHome()">홈으로 돌아가기</button>
+</div>
+
+<script>
+  // URL에서 result 값 가져오기
+  const urlParams = new URLSearchParams(window.location.search);
+  const resultValue = urlParams.get('result');
+
+  // 결과 값 표시
+  const resultDiv = document.getElementById('result');
+  resultDiv.innerText = `축하합니다! ${resultValue}등 상품입니다.`;
+
+  // 홈으로 돌아가기
+  function goToHome() {
+    window.location.href = 'index.html';
+  }
+</script>
+
+</body>
+</html>
