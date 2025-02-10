@@ -184,12 +184,23 @@ p{
 		.menu_button_area ul li button {
         background-color: transparent;
         border: none;
-        background: #e8e8e8;
+        background: #E8F4FA;
 		color: #555;
 		font-weight: 400;
         padding: 15px 30px;
         border-radius: 30px;
     }  
+
+		    .menu_button_area ul li button:hover {
+        background-color: transparent;
+        border: none;
+        background: #B0E5FF;
+	color: #003555;
+	margin: 0 10px 0 10px;
+	font-weight: 400;
+        padding: 15px 30px;
+        border-radius: 30px;
+    }
 		#goingTop {
     position: fixed;
     right: 5%;
@@ -201,7 +212,7 @@ p{
     height: 50px;
     border-radius: 50%;
     border: none;
-    background-image: linear-gradient(315deg, #009A95, #01CF78);
+    background-image: linear-gradient(315deg, #003555, #003555);
     color: #ffffff;
     font-size: 25px;
     box-shadow: 8px 8px 12px #cccccc;
