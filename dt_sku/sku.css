@@ -1,0 +1,269 @@
+@charset "UTF-8";
+/* CSS Document */
+
+*{
+  margin : 0;
+  padding : 0;
+}
+
+body {
+		margin:0;
+		padding:0;
+        justify-content: center;
+        width: 100%;
+        font-family: 'Poppins', sans-serif;
+        overflow: scroll;
+    }
+
+h1{
+  text-align : center;
+  line-height : 100vh;
+  color : white;
+  font-size : 70px;
+}
+
+h2{
+  text-decoration-color : black;
+  text-decoration-line: none;
+}
+	
+
+p{
+  text-align : center;
+  line-height : 100vh;
+  font-size : 30px;
+}
+
+a{
+  color: #003555;
+  font-size: 1.5em;
+  text-decoration-line: none;
+}
+
+	#goingTop {
+    position: fixed;
+    right: 5%;
+    bottom: 5%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    border: none;
+    background-image: linear-gradient(315deg, #003555, #003555);
+    color: #ffffff;
+    font-size: 40px;
+    box-shadow: 8px 8px 12px #cccccc;
+    cursor: pointer;
+}
+	#goingTop:hover{
+     background-color: #65E9A9;
+	 scale: 110%;
+     transition: all 0.3s;
+}
+
+
+#menu {
+    position: fixed;
+    bottom: 5%;
+ 	 top: 85%;
+ 	 left: 50%;
+ 	 margin: 0 0 0 -250px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 500px;
+    height: 80px;
+    border-radius: 40px;
+    border: none;
+    background-image: linear-gradient(315deg, #009A95, #01CF78);
+    color: #ffffff;
+    font-size: 50px;
+    box-shadow: 8px 8px 12px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+}
+
+
+.navbar {
+    background-color: rgba(255, 255, 255, 0.8);/* 네비게이션 바 배경색 */
+	font-weight: 800;
+    color: #333; /* 텍스트 색상 */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 80px;
+    padding: 0 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* 그림자 효과 */
+}
+
+.navbar-left {
+    display: flex;
+    align-items: center;
+}
+
+.navbar-center {
+    flex-grow: 1;
+    text-align: center;
+}
+
+.btn-back {
+    margin-left: 100%;
+	color: #333; /* 버튼 텍스트 색상 */
+    text-decoration: none;
+}
+
+.content {
+    margin-top: 70px; /* 네비게이션 바의 높이 + 여백만큼 컨텐츠를 밀어줍니다. */
+    padding: 20px;
+}
+
+.bg{
+  background : url("sku_img/sku/sku_bg.png") no-repeat center;
+  background-size : cover;
+  background-attachment : fixed;
+}
+
+.info{
+  width : 100%;
+  max-width : 960px;
+  margin: auto;
+  align-self: center;
+}
+
+.info_m{
+  width : 100%;
+  max-width : 960px;
+  margin: auto;
+  align-self: center;
+}
+
+.container {
+    position: fixed;
+    width: 100%;
+    max-width: 100%;
+	height: 0%;
+    overflow: hidden;
+    background-color: rgba( 255, 255, 255, 0.5 );
+}
+
+.container + .container {
+    margin-top: 50px;
+}
+
+.up_w{
+    width: 100%;
+	margin: auto;
+ 	background-size: 100vh;
+	background-attachment: fixed;
+}
+
+.up_m{
+	display: grid;
+}
+
+.link{
+	text-align: center;
+	margin-bottom: 20vh;
+}
+
+ .link button {
+        background-color: transparent;
+        border: none;
+        background: #003555;
+		color: #fff;
+		margin: 0 10px 0 10px;
+		font-weight: 600;
+        padding: 20px 40px;
+        border-radius: 100px;
+	    font-size: 1.2em;
+    }
+
+  .link button:hover {
+        background-color: transparent;
+        border: none;
+        background: #B0E5FF;
+		color: #003555;
+		margin: 0 10px 0 10px;
+		font-weight: 600;
+        padding: 20px 40px;
+        border-radius: 100px;
+	    transition: all 0.5s;
+	    font-size: 1.2em;
+    }
+
+  .link button.active {
+        background: #003555;
+        color: #fff;
+		font-weight: 600;
+    }
+
+@media screen and (max-width: 1300px) {
+		.up_w{
+ 		 width: 100%;
+		 margin: auto;
+		 display: none;
+ 		 background-size: 100vh;
+		 background-attachment: fixed;
+	}
+ 	   .bg {
+ 	 	display: none;
+	}
+		.info{
+		display: none;
+		
+	}
+		.info_m{
+		height : 100%;
+ 	    margin: auto;
+	    align-self: center;
+		
+	}
+		.navbar {
+    background-color: rgba(255, 255, 255, 0.8);/* 네비게이션 바 배경색 */
+	font-weight: 800;
+    color: #333; /* 텍스트 색상 */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 50px;
+    padding: 0 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* 그림자 효과 */
+}
+	.link{
+	text-align: center;
+	font-size: 1.5em;
+	margin-bottom: 20vh;
+}
+	
+	p{
+  text-align : center;
+  line-height : 100vh;
+  font-size : 20px;
+}
+}
+
+@media screen and (min-width: 1300px) {
+ 	   .info_m{
+	   display: none;
+	}
+	.info{
+	   height : 100%;
+ 	   margin: auto;
+	   align-self: center;
+	}
+	.up_m{
+	   display: none;
+	}
+}
